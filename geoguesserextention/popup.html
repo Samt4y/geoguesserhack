@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <span class="dot"></span>
+    <h1>Request inspector</h1>
+  </header>
+  <p class="hint">Hooks <code>PUT .../locations</code> and <code>SingleImageSearch</code> RPC and shows the JSON responses.</p>
+  <div class="tabs">
+    <button id="tabLoc" class="tab active">Locations</button>
+    <button id="tabSis" class="tab">SingleImageSearch</button>
+  </div>
+  <div class="row">
+    <button id="copy">Copy JSON</button>
+    <button id="clear" class="ghost">Clear</button>
+  </div>
+  <div id="meta">No capture yet.</div>
+  <div id="rounds"></div>
+  <pre id="body">—</pre>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body { width: 400px; margin: 0; padding: 12px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: #111827; color: #e5e7eb; }
+header { display: flex; align-items: center; gap: 8px; }
+h1 { font-size: 13px; margin: 0; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; }
+.hint { color: #9ca3af; font-size: 11px; }
+code { background: #1f2937; padding: 1px 4px; border-radius: 4px; }
+.row { display: flex; gap: 8px; margin: 8px 0; }
+button { background: #22c55e; border: none; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-weight: 600; }
+button.ghost { background: #374151; color: #fff; }
+#meta { color: #9ca3af; font-size: 11px; white-space: pre-wrap; word-break: break-all; margin-bottom: 8px; }
+#rounds { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.round { background: #1f2937; border-radius: 8px; padding: 6px 8px; }
+.round .links { margin-top: 4px; display: flex; gap: 6px; }
+.round a, .round button { font-size: 11px; color: #fff; background: #374151; border-radius: 6px; padding: 3px 8px; text-decoration: none; border: none; cursor: pointer; }
+.tabs { display: flex; gap: 6px; margin: 8px 0 4px; }
+.tab { background: #374151; color: #fff; }
+.tab.active { background: #3b82f6; color: #fff; }
+.bounds { color: #9ca3af; font-size: 11px; white-space: pre-wrap; word-break: break-all; }
+#body { background: #030712; border: 1px solid #374151; border-radius: 8px; padding: 10px; max-height: 400px; overflow: auto; white-space: pre-wrap; word-break: break-word; }

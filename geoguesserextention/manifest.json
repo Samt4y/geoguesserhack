@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "OpenGuessr Location Inspector",
+  "version": "1.0.0",
+  "description": "Hooks PUT /locations and SingleImageSearch RPC and displays the JSON responses.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://accounts.openguessr.com/*",
+    "https://openguessr.com/*",
+    "https://maps.googleapis.com/*",
+    "https://www.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "OpenGuessr Location Inspector"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://openguessr.com/*", "https://*.openguessr.com/*", "https://www.google.com/*"],
+      "js": ["hook.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://openguessr.com/*", "https://*.openguessr.com/*", "https://www.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
